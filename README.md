@@ -8,17 +8,21 @@ This repository documents a local home lab setup replicating a secure 3-tier ent
 
 ## 🏗️ Architecture Overview
 
-┌────────────────────────────────────────────────────────┐
-│            1. TELEMETRY & GUARDRAILS (Argus)           │
-│                👉 Langfuse (Docker) + Llama Guard3     │
-└──────────────────────────┬─────────────────────────────┘
-▼
-┌────────────────────────────────────────────────────────┐
-│            2. ORCHESTRATION & ROUTING (Pathfinder)     │
-│                👉 Python Client API Middleware         │
-└──────────────────────────┬─────────────────────────────┘
-▼
-┌────────────────────────────────────────────────────────┐
-│            3. INTELLIGENCE & KNOWLEDGE (Sage)          │
-│                👉 Ollama (Llama3) + Qdrant (Vector DB) │
-└────────────────────────────────────────────────────────┘
+    ┌────────────────────────────────────────────────────────┐
+    │            1. TELEMETRY & GUARDRAILS (Argus)           │
+    │                👉 Langfuse (Docker) + Llama Guard3     │
+    └──────────────────────────┬─────────────────────────────┘
+
+                               ▼
+
+    ┌────────────────────────────────────────────────────────┐
+    │            2. ORCHESTRATION & ROUTING (Pathfinder)     │
+    │                👉 Python Client API Middleware         │
+    └──────────────────────────┬─────────────────────────────┘
+
+                               ▼
+
+    ┌────────────────────────────────────────────────────────┐
+    │            3. INTELLIGENCE & KNOWLEDGE (Sage)          │
+    │                👉 Ollama (Llama3) + Qdrant (Vector DB) │
+    └────────────────────────────────────────────────────────┘
